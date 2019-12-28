@@ -4,22 +4,7 @@ import { Text, View, Alert, StyleSheet, Image, FlatList } from 'react-native'
 export default class Settings extends Component {
 
     render() {
-        /*
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-            Testeeeeeeeeeeeeeeeeeeeeeee
-        */
+        
         dados = [
             {key: 'Linha 1'},
             {key: 'Linha 2'},
