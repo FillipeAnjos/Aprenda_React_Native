@@ -18,6 +18,7 @@ export default class Settings extends Component {
             Testeeeeeeeeeeeeeeeeeeeeeee
             Testeeeeeeeeeeeeeeeeeeeeeee
             Testeeeeeeeeeeeeeeeeeeeeeee
+            Testeeeeeeeeeeeeeeeeeeeeeee
         */
         dados = [
             {key: 'Linha 1'},
