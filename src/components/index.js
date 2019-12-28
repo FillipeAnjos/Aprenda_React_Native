@@ -8,13 +8,15 @@ import Login from './login';
 import Home from "./home";
 import Profile from './profile';
 import Settings from "./settings";
+import Lista from "./lista";
 
 //Arquivo responsavel pela ROTA - NAVEGAÇÃO POR TABS
 const myTabNavigator = createBottomTabNavigator(
     {
         Home: Home,
         Profile: Profile,
-        Settings: Settings
+        Settings: Settings,
+        Lista: Lista
     },
     {
         tabBarOptions:{
@@ -37,6 +39,8 @@ const myTabNavigator = createBottomTabNavigator(
                     iconName = 'user-alt';
                 else if(routeName === 'Settings')
                     iconName = 'cog';
+                else if(routeName === 'Lista')
+                    iconName = 'list';
 
                 return <IconComponent name={iconName}
                                       size={20}
