@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Alert, StyleSheet, Image } from 'react-native'
+import { Text, View, Alert, StyleSheet, Image, StatusBar } from 'react-native'
 
 export default class Home extends Component {
 
@@ -12,6 +12,13 @@ export default class Home extends Component {
 
         return (
             <View style={styles.container}>
+
+                <StatusBar 
+                    barStyle="dark-content"
+                    backgroundColor="#fff"
+                    hidden={false}
+                />                
+
                 <Image 
                     source={require('../assets/logoFillipe/fillipeAnjos.jpg')} 
                     style={styles.logoFillipe}
