@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, Alert, StyleSheet, Image, FlatList, ActivityIndicator } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage';
 
 export default class Lista extends Component {
 
@@ -11,8 +12,25 @@ export default class Lista extends Component {
         }
     }
 
-    loadUsers = () => {
-        fetch("https://randomuser.me/api/?results=1000")
+    
+    //O methodo componentDidMount() é chamado apenas uma vez, acada vez que roda a aplicação
+    async componentDidMount() {
+
+        let totalRec = 0;
+
+        try{
+
+            totalRec = await AsyncStorage.getItem("@chave_API");
+
+            if(totalRec === null){
+                totalRec = 1000;
+            }
+        
+        }catch(e){
+            Alert.alert(e);
+        }
+
+        fetch(`https://randomuser.me/api/?results=${totalRec}`)
             .then( res => res.json() )
             .then( res => {
                 this.setState({
@@ -20,11 +38,7 @@ export default class Lista extends Component {
                     loading: false
                 })
             })
-    }
-
-    //O methodo componentDidMount() é chamado apenas uma vez, acada vez que roda a aplicação
-    componentDidMount() {
-        this.loadUsers();
+            
     }
 
     render() {
